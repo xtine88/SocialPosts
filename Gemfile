@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3'
+gem 'simple_form', '~> 3.5'
 
 
 group :development, :test do
