@@ -6,7 +6,13 @@
 		<p class="text-center">
 			<b>YOUR TIME ZONE: <%= Time.zone.name %></b><br>
 			<div class="social">
-				<%= link_to "Connect with Twitter", "/auth/twitter", class: "btn btn-primary btn-block btn-sm" %>
+				<% unless current_user.connections.where(provider: "twitter").any? %>
+					<%= link_to "Connect with Twitter", "/auth/twitter", class: "btn btn-primary btn-block btn-sm" %>
+				<% else %>
+					<%= link_to "Connect with Twitter", "/auth/twitter", class: "btn btn-primary btn-block btn-sm", disabled: true %>
+					<%= link_to "Delete Connection", connection_path(current_user.connections.where(provider: "twitter").first), method: :delete %>
+
+				<% end %>
 			</div>
 			<hr>
 			<%= link_to "Change", edit_user_registration_path, class: "btn btn-primary btn-info btn-block" %>
