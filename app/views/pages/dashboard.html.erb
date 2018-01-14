@@ -11,7 +11,6 @@
 				<% else %>
 					<%= link_to "Connect with Twitter", "/auth/twitter", class: "btn btn-primary btn-block btn-sm", disabled: true %>
 					<%= link_to "Delete Connection", connection_path(current_user.connections.where(provider: "twitter").first), method: :delete %>
-
 				<% end %>
 			</div>
 			<hr>
