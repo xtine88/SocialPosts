@@ -5,8 +5,11 @@
 		<div class="timezone">
 		<p class="text-center">
 			<b>YOUR TIME ZONE: <%= Time.zone.name %></b><br>
+			<div class="social">
+				<%= link_to "Connect with Twitter", "/auth/twitter", class: "btn btn-primary btn-block btn-sm" %>
+			</div>
 			<hr>
-			<%= link_to "Change", edit_user_registration_path, class: "btn btn-default btn-info btn-block" %>
+			<%= link_to "Change", edit_user_registration_path, class: "btn btn-primary btn-info btn-block" %>
 		</p>
 		</div>
 	</div>

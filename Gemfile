@@ -21,6 +21,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3'
 gem 'simple_form', '~> 3.5'
 gem 'devise', '~> 4.4'
 gem 'dotenv-rails', groups:[:development]
+gem 'omniauth-twitter', '~> 1.4'
 
 
 
